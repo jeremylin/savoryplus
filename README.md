@@ -1,0 +1,1 @@
+icon class name from http://materializecss.com/icons.html

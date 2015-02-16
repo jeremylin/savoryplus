@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>savory+</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+</head>
+<body>
+    <div class="bgColor">
+    	<div class="center">
+    		<img class="mobileBg" src="images/background.png" alt="mobile sharp">
+    		<div id="sidr" class="pageLayout">
+   	    		<div id="cbp-spmenu-s1" class="cbp-spmenu-left cbp-spmenu-open menu">
+	    			<div class="user">
+	    				<span class="thumbnail head01"></span>
+	    				<span class="userName">Jeremy Lin</span>
+	    			</div>
+	    			<ul class="funcWrap">
+	    				<li><i class="small mdi-action-grade"></i>Hot Recipes</li>
+	    				<li><i class="small mdi-social-mood"></i>Free Style</li>
+	    				<li><i class="small mdi-action-schedule"></i>Schedule<span class="info">1</span></li>
+	    				<li><i class="small mdi-content-add"></i>Create a Recipe<span class="info">3</span></li>
+	    				<li><i class="small mdi-action-settings"></i>Personal Setting</li>
+	    				<li><i class="small mdi-content-mail"></i>Contact Us</li>
+	    				<li><i class="small mdi-content-forward"></i>Log out</li>
+	    			</ul>
+	    		</div>
+    		</div>
+		    <div id="recipe001" class="pageLayout">
+		    	<div class="infoBar"></div>
+		    	<div id="container_wrap" class="">
+			    	<div class="header">
+			    		<span class="mainTitle">Recipes</span>
+			    		<i class="iconLeft medium mdi-navigation-menu active" id="showLeftPush"></i>
+			    		<i class="iconRight medium mdi-action-search"></i>
+			    	</div>
+			    	<div class="container">
+			    		<div class="feedRecipeWrap">
+			    			<img src="images/feed-food-01.png">
+			    			<div class="overlayer">
+			    				<span class="feedRecipeName">roast pizza</span>
+				    			<span class="thumbnail head01"></span>
+				    			<span class="viewNum">+200</span>
+			    			</div>
+			    		</div>
+			    		<div class="feedRecipeWrap">
+			    			<img src="images/feed-food-02.png">
+			    			<div class="overlayer">
+			    				<span class="feedRecipeName">Thai Fried Rolls</span>
+				    			<span class="thumbnail head02"></span>
+				    			<span class="viewNum">+99</span>
+			    			</div>
+			    		</div>
+			    		<div class="feedRecipeWrap">
+			    			<img src="images/feed-food-03.png">
+			    			<div class="overlayer">
+			    				<span class="feedRecipeName">ciabatta focaccia</span>
+				    			<span class="thumbnail head03"></span>
+				    			<span class="viewNum">+796</span>
+			    			</div>
+			    		</div>
+			    		<div class="feedRecipeWrap">
+			    			<img src="images/feed-food-04.png">
+			    			<div class="overlayer">
+			    				<span class="feedRecipeName">Classic Honey Waffles</span>
+				    			<span class="thumbnail head04"></span>
+				    			<span class="viewNum">+1.5k</span>
+			    			</div>
+			    		</div>
+			    		<div class="feedRecipeWrap">
+			    			<img src="images/feed-food-05.png">
+			    			<div class="overlayer">
+			    				<span class="feedRecipeName">Chicken Marsala</span>
+				    			<span class="thumbnail head05"></span>
+				    			<span class="viewNum">+417</span>
+			    			</div>
+			    		</div>
+			    		<div class="feedRecipeWrap">
+			    			<img src="images/feed-loading.gif">
+			    		</div>		    		
+			    	</div>
+			    </div>
+		    </div>
+		    <div id="loading" class="pageLayout">
+		    	<h1>SAVORY+</h1>
+		    </div>
+    	</div>
+    </div>
+	<script>
+		$("#loading").click(function () {
+		$("#loading").fadeOut("slow");
+		});
+	</script>
+	<script src="js/classie.js"></script>
+	<script>
+		var menuLeft = document.getElementById( 'cbp-spmenu-s1' );
+		var showLeftPush = document.getElementById( 'showLeftPush' );
+		var body = document.getElementById('container_wrap');
+
+		showLeftPush.onclick = function() {
+			classie.toggle( this, 'active' );
+			classie.toggle( body, 'cbp-spmenu-push-toright' );
+			classie.toggle( menuLeft, 'cbp-spmenu-open' );
+		};
+	</script>
+</body>
+</html>
