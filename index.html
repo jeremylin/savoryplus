@@ -13,6 +13,33 @@
     <div class="bgColor">
     	<div class="center">
     		<img class="mobileBg" src="images/background.png" alt="mobile sharp">
+    		<div id="search" class="pageLayout">
+    			<div class="search">
+    				<div class="searchInput">
+    					<i class="small mdi-action-search"></i><input type="search" name="user_search" placeholder="SEARCH" />
+    					<span class="cancelBtn">Cancel</span>
+    				</div>
+    				<ul class="category">
+    					<span>Popular Recipes</span>
+    					<li>Grilled Spicy Chicken</li>
+    					<li>Roast Chicken</li>
+    					<li>Roast Beef</li>
+    				</ul>
+    				<ul class="category">
+    					<span>All Categories</span>
+    					<li>Beef</li>
+    					<li>Pork</li>
+    					<li>Vegetables</li>
+    					<li>Soups</li>
+    					<li>Fish & Seafood</li>
+    					<li>Eggs</li>
+    					<li>Desserts</li>
+    					<li>Poultry</li>
+    					<li>Mains</li>
+    					<li>Others</li>
+    				</ul>
+    			</div>
+    		</div>
     		<div id="sidr" class="pageLayout">
    	    		<div id="cbp-spmenu-s1" class="cbp-spmenu-left cbp-spmenu-open menu">
 	    			<div class="user">
@@ -106,6 +133,14 @@
 			classie.toggle( body, 'cbp-spmenu-push-toright' );
 			classie.toggle( menuLeft, 'cbp-spmenu-open' );
 		};
+	</script>
+	<script>
+		$(".mdi-action-search").click(function () {
+		$("#search:hidden:first").fadeIn(30);
+		});
+		$(".cancelBtn").click(function () {
+		$("#search").fadeOut(100);
+		});cancelBtn
 	</script>
 </body>
 </html>
