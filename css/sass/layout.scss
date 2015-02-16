@@ -1,0 +1,112 @@
+html ,body {
+	font-family: 'Raleway', sans-serif;
+	height: 100%;
+}
+
+.small {
+	font-size: 22px;
+}
+
+.medium {
+	font-size: 32px;
+}
+
+.mainTitle {
+	display: inline-block;
+	font-size: 16px;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	color: #E26700;
+	text-align: center;
+}
+
+.bgColor {
+	min-width: 900px;
+    height: 100%;
+    min-height: 100%;
+	margin: 0 auto;
+	background-color: #cccccc;
+
+	.center {
+		width: 320px;
+		margin: 0 auto;
+		position: relative;
+
+		.mobileBg {
+			width: 320px;
+			margin: 30px auto;
+		}
+
+		.pageLayout {
+			position: absolute;
+			left: 15px;
+			top: 86px;
+			width: 291px;
+			height: 510px;
+			@include radius(5px);
+			overflow: hidden;
+		}		
+	}
+}
+
+.infoBar, .header {
+	width: 291px;
+}
+
+.infoBar {
+	height: 20px;
+	background-color: #4F4F4F;
+	@include radius(5px, top, left);
+	@include radius(5px, top, right);
+}
+
+.header {
+	height: 40px;
+	line-height: 40px;
+	background-color: #FFEFC7;
+	position: relative;
+
+	.iconRight, .iconLeft {
+		color: #E26700;
+		position: absolute;
+		top: 0;
+		cursor: pointer;
+	}
+
+	.iconLeft {
+		left: 10px;
+	}
+
+	.iconRight {
+		right: 10px;
+	}
+}
+
+.thumbnail {
+	display: inline-block;
+	@include radius(15px);
+	width: 30px;
+	height: 30px;
+	background: url(../images/thumnails.png) no-repeat;
+
+	&.head01 {
+		background-position: -28px 0px;
+	}
+
+	&.head02 {
+		background-position: -28px -33px;
+	}
+
+	&.head03 {
+		background-position: -28px -66px;
+	}
+
+	&.head04 {
+		background-position: -28px -99px;
+	}
+
+	&.head05 {
+		background-position: -28px -132px;
+	}
+}
