@@ -13,10 +13,11 @@
     <div class="bgColor">
     	<div class="center">
     		<img class="mobileBg" src="images/background.png" alt="mobile sharp">
+    		<div class="infoBar"></div>
     		<div id="search" class="pageLayout">
     			<div class="search">
     				<div class="searchInput">
-    					<i class="small mdi-action-search"></i><input type="search" name="user_search" placeholder="SEARCH" />
+    					<i class="small mdi-action-search"></i><input class="typeArea" type="search" name="user_search" placeholder="SEARCH" />
     					<span class="cancelBtn">Cancel</span>
     				</div>
     				<ul class="category">
@@ -58,7 +59,6 @@
 	    		</div>
     		</div>
 		    <div id="recipe001" class="pageLayout">
-		    	<div class="infoBar"></div>
 		    	<div id="container_wrap" class="">
 			    	<div class="header">
 			    		<span class="mainTitle">Recipes</span>
@@ -141,6 +141,18 @@
 		$(".cancelBtn").click(function () {
 		$("#search").fadeOut(100);
 		});cancelBtn
+	</script>
+	<script>
+	$(document).ready(function(){
+	    $(".typeArea").focusin(function(){
+	        $( "input" ).addClass( "bigger" );
+	        $( ".cancelBtn" ).addClass( "disappear" );
+	    });
+	    $(".typeArea").focusout(function(){
+	        $( "input" ).removeClass( "bigger" );
+	        $( ".cancelBtn" ).removeClass( "disappear" );
+	    });
+	});
 	</script>
 </body>
 </html>
