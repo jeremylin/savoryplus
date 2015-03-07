@@ -59,6 +59,63 @@
 	    		</div>
     		</div>
 		    <div id="recipe001" class="pageLayout">
+		    	<div id="recipe_wrap" class="hide">
+			    	<div class="header">
+			    		<span class="mainTitle">roast pizza</span>
+			    		<i class="iconLeft medium mdi-image-navigate-before"></i>
+			    	</div>
+			    	<div class="container">
+			    		<img class="foodOverview" src="images/food-detail.jpg">
+			    		<div class="cardWrap">
+				    		<div class="intro recipeStepCard">
+				    			<div class="authorInfo"><span class="thumbnailBg"><span class="thumbnail head01"></span></span>Jeremy Lin</div>
+				    			<p class="suggestion">"This will melt in your mouth! This pork tenderloin soaks up the yummy juices as it cooks. Make sure to serve up the au jus on the side - its amazing! This recipe is so simple, you will love it!"</p>
+				    			<div class="rate">★★★★<span class="noneRate">★</span></div>
+				    			<ul class="cookInfo">
+				    				<li>
+				    					<div class="cookDetail preTime">
+					    					<span class="duration">35</span>
+					    					<br>mins
+				    					</div>
+				    					<span class="infoType">Prep. Time</span>
+				    				</li>
+				    				<li>
+				    					<div class="cookDetail cookTime">
+					    					<span class="duration">2</span>
+					    					<br>hrs
+				    					</div>
+				    					<span class="infoType">Cook Time</span>
+				    				</li>
+				    				<li>
+				    					<div class="device">
+				    						<span class="icon slowcooker"></span>
+				    					</div>
+				    					<span class="infoType">Hitachi CL-01</span>
+				    				</li>
+				    			</ul>
+				    			<p class="cookPeople">
+				    				They also cook this <span class="viewNum">+200</span>
+				    			</p>
+				    		</div>
+				    		<div class="steps recipeStepCard">
+
+				    		</div>
+				    	</div>
+			    	</div>
+			    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 		    	<div id="container_wrap" class="">
 			    	<div class="header">
 			    		<span class="mainTitle">Recipes</span>
@@ -118,8 +175,25 @@
     	</div>
     </div>
 	<script>
-		$("#loading").click(function () {
-		$("#loading").fadeOut("slow");
+		$(" #loading ").click(function () {
+		$(" #loading ").fadeOut( "slow" );
+		});
+	</script>
+	<script>
+		$(".feedRecipeWrap").click(function () {
+			$( "#recipe_wrap" ).removeClass( "hide" );
+	        $( "#recipe_wrap" ).addClass( "show" );
+		});
+		$(".mdi-image-navigate-before").click(function () {
+			$( "#recipe_wrap" ).removeClass( "show" );
+	        $( "#recipe_wrap" ).addClass( "hide" );
+	        $( ".foodOverview" ).removeClass( "blur" );
+	        $(" .cardWrap ").fadeOut( 100 );
+		});
+		$(".foodOverview").click(function () {
+			$(this).addClass( "blur" );
+			$(" .cardWrap ").fadeIn( 1200 );
+			
 		});
 	</script>
 	<script src="js/classie.js"></script>
@@ -140,7 +214,7 @@
 		});
 		$(".cancelBtn").click(function () {
 		$("#search").fadeOut(100);
-		});cancelBtn
+		});
 	</script>
 	<script>
 	$(document).ready(function(){
