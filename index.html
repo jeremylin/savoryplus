@@ -8,6 +8,7 @@
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+    <script src="js/animation.js"></script>
 </head>
 <body>
     <div class="bgColor">
@@ -97,22 +98,18 @@
 				    				They also cook this <span class="viewNum">+200</span>
 				    			</p>
 				    		</div>
-				    		<div class="steps recipeStepCard">
+				    		<div class="steps step_01 recipeStepCard">
+
+				    		</div>
+				    		<div class="steps step_02 recipeStepCard">
+
+				    		</div>
+				    		<div class="steps step_03 recipeStepCard">
 
 				    		</div>
 				    	</div>
 			    	</div>
 			    </div>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -163,8 +160,8 @@
 				    			<span class="viewNum">+417</span>
 			    			</div>
 			    		</div>
-			    		<div class="feedRecipeWrap">
-			    			<img src="images/feed-loading.gif">
+			    		<div class="feedRecipeWrap loadPhoto">
+			    			<span class="loading"></span>
 			    		</div>		    		
 			    	</div>
 			    </div>
@@ -174,28 +171,6 @@
 		    </div>
     	</div>
     </div>
-	<script>
-		$(" #loading ").click(function () {
-		$(" #loading ").fadeOut( "slow" );
-		});
-	</script>
-	<script>
-		$(".feedRecipeWrap").click(function () {
-			$( "#recipe_wrap" ).removeClass( "hide" );
-	        $( "#recipe_wrap" ).addClass( "show" );
-		});
-		$(".mdi-image-navigate-before").click(function () {
-			$( "#recipe_wrap" ).removeClass( "show" );
-	        $( "#recipe_wrap" ).addClass( "hide" );
-	        $( ".foodOverview" ).removeClass( "blur" );
-	        $(" .cardWrap ").fadeOut( 100 );
-		});
-		$(".foodOverview").click(function () {
-			$(this).addClass( "blur" );
-			$(" .cardWrap ").fadeIn( 1200 );
-			
-		});
-	</script>
 	<script src="js/classie.js"></script>
 	<script>
 		var menuLeft = document.getElementById( 'cbp-spmenu-s1' );
@@ -207,26 +182,6 @@
 			classie.toggle( body, 'cbp-spmenu-push-toright' );
 			classie.toggle( menuLeft, 'cbp-spmenu-open' );
 		};
-	</script>
-	<script>
-		$(".mdi-action-search").click(function () {
-		$("#search:hidden:first").fadeIn(30);
-		});
-		$(".cancelBtn").click(function () {
-		$("#search").fadeOut(100);
-		});
-	</script>
-	<script>
-	$(document).ready(function(){
-	    $(".typeArea").focusin(function(){
-	        $( "input" ).addClass( "bigger" );
-	        $( ".cancelBtn" ).addClass( "disappear" );
-	    });
-	    $(".typeArea").focusout(function(){
-	        $( "input" ).removeClass( "bigger" );
-	        $( ".cancelBtn" ).removeClass( "disappear" );
-	    });
-	});
 	</script>
 </body>
 </html>

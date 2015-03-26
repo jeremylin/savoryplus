@@ -1,6 +1,6 @@
 //首頁
 #loading {
-	background-color: #FFEBBE;
+	background-color: #FFF3E8;
 	z-index: 9991;
 
 	h1 {
@@ -54,6 +54,19 @@
 				}
 			}
 		}
+
+		.loadPhoto {
+			background-color: #FFF3E8;
+
+			.loading {
+				background: url(../images/feed-loading.gif) no-repeat;
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				left: 130px;
+				top: 72px;
+			}			
+		}
 	}
 
 	#container_wrap {
@@ -90,7 +103,7 @@
 
 		&.hide {
 			position: absolute;
-			left: -300px;
+			left: 300px;
 			top: 0;
 			-webkit-transition: all 0.2s ease-in;
 			-moz-transition: all 0.2s ease-in;
@@ -113,6 +126,9 @@
 			position: absolute;
 			left: 20px;
 			top: 85px;
+			-webkit-transition: all 0.3s ease-in;
+			-moz-transition: all 0.3s ease-in;
+			transition: all 0.3s ease-in;
 			display: none;
 
 			.intro {
@@ -246,6 +262,16 @@
 				float: left;	
 			}
 		}
+
+		.move_01, .move_02, .move_03 {
+			-webkit-transition: all 0.3s ease-in;
+			-moz-transition: all 0.3s ease-in;
+			transition: all 0.3s ease-in;
+		}
+
+		.move_01 { left: -215px;}
+		.move_02 { left: -458px;}
+		.move_03 { left: -702px;}
 	}
 }
 
